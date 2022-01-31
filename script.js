@@ -1,22 +1,15 @@
-let num = 266219;
-let str = String(num);
-console.log(typeof str);
-let strToArr = Array.from(str);
-console.log(strToArr);
-let strArrToNum = strToArr.map(Number);
-console.log(strArrToNum);
-let count = 1;
+'use strict';
 
-strArrToNum.forEach(function(entry) {
-  count *= entry;
-  
-});
+let num = 266219 + "";
+let numToArr = Array.from(num).map(Number);
+let countNum = 1;
 
-console.log(count);
+numToArr.forEach(function(entry) {
+  countNum *= entry;
+})
 
-count **= 3;
-console.log(count);
-
-let countToStr = String(count);
-let res = Number(countToStr.substr(0,2));
+countNum **= 3;
+console.log(countNum);
+let res = Number(String(countNum).substr(0,2));
 console.log(res);
+
