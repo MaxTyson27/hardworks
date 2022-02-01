@@ -60,3 +60,31 @@ let namePerson = "Александр";
 
 namePerson == "Артем" ? console.log("директор") : console.log("студент");
 namePerson == "Александр" ? console.log("преподаватель") : console.log("студент");
+
+
+const randomFunc = function (a) {
+
+  function stepOne (a, str, num) {
+    if (typeof a == "string"){
+      console.log(str);
+
+    } else {
+      return console.log(num);
+    }
+  }
+
+  function stepTwo(a) {
+    if(a.length - 1 > 30) {
+      return a.substring(0, 30) + "..."
+      
+    } else {
+      return a;
+    }
+  }
+
+  stepOne(a ,"В качестве аргумента - строка", "В качестве аргумента - цифры");
+  console.log(stepTwo(a));
+  
+};
+
+randomFunc("Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, blanditiis officia odio, tenetur cum quam impedit numquam assumenda itaque quod commodi necessitatibus atque iure vel nobis consectetur minima animi reprehenderit.");
