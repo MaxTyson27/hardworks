@@ -88,3 +88,63 @@ const randomFunc = function (a) {
 };
 
 randomFunc("Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, blanditiis officia odio, tenetur cum quam impedit numquam assumenda itaque quod commodi necessitatibus atque iure vel nobis consectetur minima animi reprehenderit.");
+
+
+let arr = ["23", "45", "553", "753", "411", "989", "900"];
+arr.forEach(function(count) {
+  if(count[0] == "2" || count[0] == "4"){
+    console.log(count);
+  }
+});
+
+
+
+// const isPrime = function (num) {
+  
+//   for(let i = 2, max = Math.sqrt(num); i <= max; i++) {
+//     if(num % i === 0) {
+//       return false;
+//     }
+//   } 
+//   return num;
+// };
+
+// const getPrime = function (num) {
+
+//   for (let i = 2; i <= num; i++) {
+//     if(isPrime(i)) {
+//       console.log(i + " Делители этого числа " + 1 + " и " + i);
+//     }
+//   }
+
+// };
+
+// getPrime(100);
+
+
+const getPrimes = function (num) {
+  const seive = [];
+  const primes = [];
+
+  for (let i = 2; i <= num; i++){
+    if(!seive[i]){
+      primes.push(i);
+      for(let j = i * 2; j <= num; j += i){
+        seive[j] = true;
+      }
+    }
+  }
+
+  primes.forEach(function (count) {
+    console.log(count + " - Делители этого числа " + 1 + " и " + count);
+  });
+}
+
+getPrimes(100);
+
+
+
+
+
+
+
